@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --ff-primary: 'Roboto', sans-serif;
+  --text-color: rgba(225, 225, 230, 1);
+  --hue: 194;
+  --primary-color: hsl(var(--hue), 100%, 63%);
+
+  --color-table: #092D38;
+
+  --bg-button: #065E7C;
+  --bg-input: #06181C;
+  --bg-remove: #F75A68;
+
+  --bg-empty: rgba(6, 24, 28, 1);
+  --text-empty-color: #4E5455;
+
+
+}
+
+/* Customização da scrollbar*/
+
+::-webkit-scrollbar {
+  position: absolute;
+  overflow: hidden;
+  background: none;
+  width: .6rem;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4A808C;
+  border-radius: 1rem;
+}
+
+/*Fim da customização scrollbar*/
+
+body {
+  font-size: 1.6rem;
+  color: var(--text-color);
+
+  background-color: #000;
+
+}
+
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+
+body * {
+  font-family: var(--ff-primary);
+}
+
+
+
+.app {
+  padding: 1rem;
+  width: 112rem;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 7rem 0;
+}
+
+header h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.search input {
+  width: 45rem;
+  background: var(--bg-input);
+  padding: 1.6rem 3.2rem 1.6rem 1.6rem;
+  border: 1px solid #4A808C;
+  border-radius: .5rem;
+
+
+  font-size: 1.6rem;
+  font-family: var(--ff-primary);
+  color: white;
+
+}
+
+.search button {
+  padding: 1.6rem 3.2rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  border-radius: .5rem;
+  border: none;
+
+
+  background-color: var(--bg-button);
+  color: white;
+
+  font-size: 1.4rem;
+  font-family: var(--ff-primary);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.search button:hover {
+  filter: brightness(1.2);
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+
+
+}
+
+table * {
+  font-size: 2rem;
+  color: var(--text-color);
+  font-weight: bold;
+
+}
+
+
+
+thead {
+  width: 110rem;
+  display: block;
+  background: var(--color-table);
+
+}
+
+tbody {
+  width: 110rem;
+  display: block;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+thead tr {
+  width: 110rem;
+  display: flex;
+}
+
+tbody tr {
+  width: 109rem;
+  display: flex;
+  align-items: center;
+}
+
+thead th,
+tbody td {
+  width: 30rem;
+}
+
+thead th:first-child,
+tbody td:first-child {
+  margin-right: 20rem;
+}
+
+
+table th {
+  text-align: left;
+  font-weight: normal;
+  padding: 1.6rem 2.4rem 1.6rem 4rem;
+
+}
+
+table td {
+  padding: 1.6rem 2.4rem 1.6rem 4rem;
+  text-align: left;
+}
+
+thead th:first-child {
+  width: 60rem;
+}
+
+td.user {
+  width: 60rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+thead,
+thead tr {
+  border-top-right-radius: 1.5rem;
+  border-top-left-radius: 1.5rem;
+}
+
+tbody {
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+}
+
+
+table th:first-child {
+  border-top-left-radius: 1.5rem;
+}
+
+table th:last-child {
+  border-top-right-radius: 1.5rem;
+}
+
+table tr:nth-child(even) {
+  background: rgba(6, 24, 28, 1);
+}
+
+table tr:nth-child(odd) {
+  background: rgba(6, 22, 27, 0.50);
+}
+
+td.user img {
+  width: 5.6rem;
+  height: 5.6rem;
+
+  object-fit: cover;
+  border-radius: 50%;
+
+}
+
+td.user a {
+  text-decoration: none;
+
+}
+
+td.user a p {
+  font-weight: bold;
+}
+
+td.user span {
+  font-weight: normal;
+}
+
+
+td .remove {
+  background: none;
+  border: none;
+  color: var(--bg-remove);
+  cursor: pointer;
+}
+
+
+#empty {
+  display: flex;
+  width: 110rem;
+  height: 62rem;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-empty);
+
+  color: var(--text-empty-color);
+
+  gap: 3rem;
+
+}
+
+.displayoff {
+  display: none;
+}
+
+#empty img {
+  width: 13rem;
+  height: 13rem;
+}
